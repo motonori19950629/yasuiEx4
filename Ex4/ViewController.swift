@@ -9,11 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    // カウント表示ラベル
+    @IBOutlet private weak var countLabel: UILabel!
+
+    // +1ボタン
+    @IBAction func plusOneButton(_ sender: Any) {
+        var count: Int
+        count = Int(countLabel.text ?? "") ?? 0
+        count += 1
+        countLabel.text = "\(count)"
     }
 
-
+    // クリアボタン
+    @IBAction func clearButton(_ sender: Any) {
+        countLabel.text = "\(0)"
+    }
 }
 
