@@ -14,9 +14,7 @@ class ViewController: UIViewController {
 
     // +1ボタン
     @IBAction func plusOneButton(_ sender: Any) {
-        var count: Int
-        count = Int(countLabel.text ?? "") ?? 0
-        count += 1
+        let count = (Int(countLabel.text ?? "") ?? 0) + 1
         countLabel.text = "\(count)"
     }
 
