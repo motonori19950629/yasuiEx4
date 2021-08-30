@@ -23,4 +23,3 @@ class ViewController: UIViewController {
         countLabel.text = "\(0)"
     }
 }
-
