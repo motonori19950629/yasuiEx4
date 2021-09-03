@@ -12,14 +12,17 @@ class ViewController: UIViewController {
     // カウント表示ラベル
     @IBOutlet private weak var countLabel: UILabel!
 
+    private var count = 0
+
     // +1ボタン
     @IBAction func plusOneButton(_ sender: Any) {
-        let count = (Int(countLabel.text ?? "") ?? 0) + 1
+        count += 1
         countLabel.text = "\(count)"
     }
 
     // クリアボタン
     @IBAction func clearButton(_ sender: Any) {
-        countLabel.text = "\(0)"
+        count = 0
+        countLabel.text = "\(count)"
     }
 }
